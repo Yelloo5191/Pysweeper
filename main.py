@@ -18,8 +18,8 @@ def main():
     # main menu loop
     def menu():
         while True:
-            # fill the display with white
-            display.fill((255, 255, 255))
+            # fill the display with blue
+            display.fill((55, 118, 171))
 
             # get mouse position
             mx, my = pygame.mouse.get_pos()
@@ -28,11 +28,11 @@ def main():
             my /= WINDOW_SIZE[1] / SCALED_WINDOW_SIZE[1]
 
             # render the menu
-            font = pygame.font.SysFont("Impact", 24)
-            title = font.render("Minesweeper", True, (0, 0, 0))
+            font = pygame.font.SysFont("Tahoma", 24)
+            title = font.render("Minesweeper", True, (255, 211, 67))
             display.blit(title, (SCALED_WINDOW_SIZE[0] // 2 - title.get_width() // 2,
                                  SCALED_WINDOW_SIZE[1] // 2 - title.get_height() // 2))
-            start = font.render("Start", True, (0, 0, 0))
+            start = font.render("Start", True, (255, 211, 67))
             display.blit(start, (SCALED_WINDOW_SIZE[0] // 2 - start.get_width() // 2,
                                  SCALED_WINDOW_SIZE[1] // 2 - start.get_height() // 2 + 50))
 
@@ -62,8 +62,8 @@ def main():
 
         # game loop runs till event QUIT is called
         while True:
-            # fill the display with white
-            display.fill((255, 255, 255))
+            # fill the display with blue
+            display.fill((55, 118, 171))
 
             # get mouse position
             mx, my = pygame.mouse.get_pos()
@@ -73,11 +73,11 @@ def main():
 
             # render the menu
             font = pygame.font.SysFont("Impact", 14)
-            bombs = font.render(f"Bombs: {board.bombs}", True, (0, 0, 0))
+            bombs = font.render(f"Bombs: {board.bombs}", True, (255, 211, 67))
             display.blit(
                 bombs, (0, SCALED_WINDOW_SIZE[1] - bombs.get_height()))
 
-            restart = font.render("Restart", True, (130, 80, 80))
+            restart = font.render("Restart", True, (255, 211, 67))
             display.blit(restart, (SCALED_WINDOW_SIZE[0] - restart.get_width(),
                                    SCALED_WINDOW_SIZE[1] - restart.get_height()))
 
